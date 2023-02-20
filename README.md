@@ -39,6 +39,32 @@ Once the boards have been received you will need to assemble the circuitry on th
 6. Perform 1-5 for the second board and the few surface mount components that are on that board
 7. Add all of the through hole items to both boards with a soldering iron (again youtube is your friend)
 
+### Teesey LC Setup
+
+1. Download Teensyduino software add-on for the Arduino software.
+https://www.pjrc.com/teensy/td_download.html
+
+2. Download ArduinoXInput library Zip
+https://github.com/dmadison/ArduinoXInput
+
+3. Add XInput library for the Teensyduino
+  *Sketch > Include Library > Add .ZIP Library
+
+4. Add Teensy XInput USB Mode
+  * https://github.com/dmadison/ArduinoXInput_Teensy
+
+5. Open and Write Sketch locaated in the Teensy Folder
+
+6. Cut a Micro USB Cable 6 inches from the connector
+  * Strip the wire ends
+  * Solder the coresponding wires to the TeensyUSB pads
+    * Example
+    * Red to VBUS
+    * White to TD-
+    * Green to TD+
+    * Black to GND
+  * Plug Micro USB into Teensy
+
 ### 3D Printed Case
 
 The files provided here and on Thingiverse are STL files for the case. They are printed in sections so that a printer with a standard bed size of 220mm x 220mm can be used print the case (I also provided the pieces combined for larger printers). Once they are printed they will have to be cleaned up and then glued together. Depending on which angle you choose to print the parts the cleanup step could be more or less cumbersome for the remove of support and getting good glue joints. I choose to print everything with flat surfaces on the bed to keep the post processing steps as easy as possible.
