@@ -24,7 +24,7 @@ Super Glue (preferrably CA glue with Accelerator)
 
 There are items in the Bill of Materials that are listed as optional (such as the Wifi chip). These items are not required to get a working device but can be used if desired. At this time I will not provide directions on how to use the optional components so use at your discretion.
 
-### Custom Circuit Board
+## Custom Circuit Board
 
 The custom circuit boards are provided as eagle files in this repository. This includes the schematic, board layout, and the gerber files. 
 
@@ -39,9 +39,9 @@ Once the boards have been received you will need to assemble the circuitry on th
 6. Perform 1-5 for the second board and the few surface mount components that are on that board
 7. Add all of the through hole items to both boards with a soldering iron (again youtube is your friend)
 
-### Teesey LC Setup
+## Teesey LC Setup
 
-1. Download Teensyduino software add-on for the Arduino software.
+1. Download Teensyduino software add-on for the Arduino software
 https://www.pjrc.com/teensy/td_download.html
 
 2. Download ArduinoXInput library Zip
@@ -51,7 +51,7 @@ https://github.com/dmadison/ArduinoXInput
   *Sketch > Include Library > Add .ZIP Library
 
 4. Add Teensy XInput USB Mode
-  * https://github.com/dmadison/ArduinoXInput_Teensy
+https://github.com/dmadison/ArduinoXInput_Teensy
 
 5. Open and Write Sketch locaated in the Teensy Folder
 
@@ -65,7 +65,7 @@ https://github.com/dmadison/ArduinoXInput
     * Black to GND
   * Plug Micro USB into Teensy
 
-### 3D Printed Case
+## 3D Printed Case
 
 The files provided here and on Thingiverse are STL files for the case. They are printed in sections so that a printer with a standard bed size of 220mm x 220mm can be used print the case (I also provided the pieces combined for larger printers). Once they are printed they will have to be cleaned up and then glued together. Depending on which angle you choose to print the parts the cleanup step could be more or less cumbersome for the remove of support and getting good glue joints. I choose to print everything with flat surfaces on the bed to keep the post processing steps as easy as possible.
 
@@ -74,7 +74,7 @@ Once everything is glued together then no post processing is technically require
 Thingiverse link:
 https://www.thingiverse.com/thing:4789405
 
-### Assembly
+## Assembly
 
 Once the case and the PCB have been built and are ready to go the handheld can be assembled.
 
@@ -86,7 +86,7 @@ TODO: step by step on loading the teensy with the controller code
 
 The carrier board was designed with the option of either using the CM4 lite or the CM4 with onboard memory. If the lite is used then a micro SD card is required. Follow the instructions on the official Raspberry Pi website or the RetroPie website to get the desired OS installed on the micro SD card. If the lite is not used then the internal memory can be loaded by removing the panel on the back of the handheld held and flipping the switch to the "ON" position. You can then use the micro USB port to load the CM4. Please refer to the official Raspberry Pi website on these steps. Once the OS is loaded then unplug the cable and flip the switch back to the off position.
 
-### /boot/config.txt
+## /boot/config.txt
 
 Regardless of which CM4 you use and which method is used to load the OS, you will need to add the following lines to the /boot/config.txt file. These are also listed in the /Config/boot/config.txt file in this repository:
 
@@ -99,7 +99,7 @@ h264_freq=333
 
 The lines above will optimize the graphics for Moonlight (if you choose to use it to stream PC games) and will enable USB 2.0 on the device to get the Teensy and external USB ports working.
 
-### First Boot
+## First Boot
 
 For the first boot you will need to plug in a HDMI cord into the HDMI mini port. This is required since the screen won't work yet. Once it boots you need to connect to Wifi or Ethernet through whatever OS you have installed and run the following commands (also listed in the Config folder):
 
@@ -110,7 +110,7 @@ sudo wget https://datasheets.raspberrypi.com/cmio/dt-blob-disp1-only.bin -O /boo
 
 These will install required packages for a system monitor script and will also install the dt-blob.bin file to get the screen working. Once this is complete reboot the handheld and unplug the HDMI cord. The device will automatically switch to the screen on the reboot.
 
-### System Setup
+## System Setup
 
 After the first boot and subsequent reboot you can either use git to download the items from the Config folder in this repository or you can copy the files to a USB stick and load them through the USB ports. Once on your Raspberry Pi, navigate to wherever you have loaded the files and run the setup.sh script as follows:
 
