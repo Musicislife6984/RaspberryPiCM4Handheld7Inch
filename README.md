@@ -80,8 +80,6 @@ Once the case and the PCB have been built and are ready to go the handheld can b
 
 TODO: step by step instructions for assembling the handheld
 
-TODO: step by step on loading the teensy with the controller code
-
 ## Software
 
 The carrier board was designed with the option of either using the CM4 lite or the CM4 with onboard memory. If the lite is used then a micro SD card is required. Follow the instructions on the official Raspberry Pi website or the RetroPie website to get the desired OS installed on the micro SD card. If the lite is not used then the internal memory can be loaded by removing the panel on the back of the handheld held and flipping the switch to the "ON" position. You can then use the micro USB port to load the CM4. Please refer to the official Raspberry Pi website on these steps. Once the OS is loaded then unplug the cable and flip the switch back to the off position.
