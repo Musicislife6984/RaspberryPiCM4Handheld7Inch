@@ -79,7 +79,8 @@ For the first boot you will need to plug in a HDMI cord into the HDMI mini port.
 
 sudo apt install python3-gpiozero<br/>
 sudo apt install python3-smbus<br/>
-sudo wget https://goo.gl/iiVxuA -O /boot/dt-blob.bin
+sudo wget https://datasheets.raspberrypi.com/cmio/dt-blob-disp1-only.bin -O /boot/dt-blob.bin
+
 
 These will install required packages for a system monitor script and will also install the dt-blob.bin file to get the screen working. Once this is complete reboot the handheld and unplug the HDMI cord. The device will automatically switch to the screen on the reboot.
 
