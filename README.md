@@ -8,7 +8,7 @@ NOTE: This is still a work in progress. The design has been finalized but I'm st
 
 ## Summary
 
-The Aegis is a DIY handheld that uses a 3D printed case with a Raspberry Pi CM4 and the official Raspberry Pi 7" screen. The official Raspberry Pi screen was chosen because it uses the DSI port on the Raspberry Pi and the CM4 could fit on either side of the display board. While a Raspberry Pi 4 might have fit inside the case, that was eventually designed, a custom carrier board was used to place the ports in the desired locations. To facilitate the controller portion of the device, the Wii U buttons and joysticks were used. This made it easy to use the button sub-assemblies so that the same tactile feel of the buttons could be maintained. The 3D printed case was based on the Wii U Gamepad but still designed from the ground up to fit the 7" screen and the custom circuit board. Finally, the whole thing was assembled with speakers and rumble motors to complete the handheld.
+The Aegis is a DIY handheld that uses a 3D printed case with a Raspberry Pi CM4 and the official Raspberry Pi 7" screen. The official Raspberry Pi screen was chosen because it uses the DSI port on the Raspberry Pi and the CM4 could fit on either side of the display board. I opted to try a Waveshare 7in DSI LCD (C) that gives 1024X600 resolution. While a Raspberry Pi 4 might have fit inside the case, that was eventually designed, a custom carrier board was used to place the ports in the desired locations. To facilitate the controller portion of the device, the Wii U buttons and joysticks were used. This made it easy to use the button sub-assemblies so that the same tactile feel of the buttons could be maintained. The 3D printed case was based on the Wii U Gamepad but still designed from the ground up to fit the 7" screen and the custom circuit board. Finally, the whole thing was assembled with speakers and rumble motors to complete the handheld.
 
 ## Building the Handheld
 
@@ -39,7 +39,7 @@ Once the boards have been received you will need to assemble the circuitry on th
 6. Perform 1-5 for the second board and the few surface mount components that are on that board
 7. Add all of the through hole items to both boards with a soldering iron (again youtube is your friend)
 
-## Teesey LC Setup
+## Teensy LC Setup
 
 1. Download Teensyduino software add-on for the Arduino software
 https://www.pjrc.com/teensy/td_download.html
