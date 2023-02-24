@@ -15,12 +15,12 @@ The Aegis is a DIY handheld that uses a 3D printed case with a Raspberry Pi CM4 
 To build the handheld you will need the items listed as required in the Bill of Materials along with the following tools:
 
 Reflow Station or Reflow Oven<br/>
-Solding Iron<br/>
+Soldering Iron<br/>
 Solder Paste<br/>
 Tweezers<br/>
 Small Philips Screw Driver<br/>
 Small Flathead Screw Driver<br/>
-Super Glue (preferrably CA glue with Accelerator)
+Super Glue (preferably CA glue with Accelerator)
 
 There are items in the Bill of Materials that are listed as optional (such as the Wifi chip). These items are not required to get a working device but can be used if desired. At this time I will not provide directions on how to use the optional components so use at your discretion.
 
@@ -34,7 +34,7 @@ Once the boards have been received you will need to assemble the circuitry on th
 1. Using the stencil, put solder paste on the larger of the two boards on the side with a majority of the components
 2. Place all of the surface mount components on that side of the board
 3. Use a reflow station and heat the underside of the board until the solder paste on the top side melts to adhere the components. A tool to prop up the PCB comes in handy here. In my opinion this part is essential as some of the components are plastic and the hot air coming out of a reflow station can melt them.
-4. Use a soldering iron to clean up an connections that didn't connect completely (You can watch youtube videos on how to do this, just search for solding iron and surface mount components)
+4. Use a soldering iron to clean up an connections that didn't connect completely (You can watch youtube videos on how to do this, just search for soldering iron and surface mount components)
 5. Flip the board over and redo steps 1-4 for the underside of the board. Since these components are larger I just used the a soldering iron for all of the components, but the same procedure with the reflow station can be used. Just be careful with the hot air hitting components you have already put down, as they can fall off if the solder paste melts again.
 6. Perform 1-5 for the second board and the few surface mount components that are on that board
 7. Add all of the through hole items to both boards with a soldering iron (again youtube is your friend)
@@ -53,11 +53,11 @@ https://github.com/dmadison/ArduinoXInput
 4. Add Teensy XInput USB Mode
 https://github.com/dmadison/ArduinoXInput_Teensy
 
-5. Open and Write Sketch locaated in the Teensy Folder
+5. Open and Write Sketch located in the Teensy Folder
 
 6. Cut a Micro USB Cable 6 inches from the connector
   * Strip the wire ends
-  * Solder the coresponding wires to the TeensyUSB pads
+  * Solder the corresponding wires to the TeensyUSB pads
     * Example
     * Red to VBUS
     * White to TD-
@@ -120,7 +120,7 @@ Provide a startup script to detect when the HDMI cord is plugged in and switch t
 Enable the buttons on the device to work<br/>
 Enable sound through the speakers<br/>
 Generating an overlay on the screen to give battery life, wifi status, bluetooth status, etc...<br/>
-Provide a safe shut down proceedure for when the power button is pressed<br/>
+Provide a safe shut down procedure for when the power button is pressed<br/>
 
 Once the setup script is run the files you downloaded may be deleted.
 
