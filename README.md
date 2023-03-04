@@ -8,7 +8,11 @@ NOTE: This is still a work in progress. The design has been finalized but I'm st
 
 ## Summary
 
-The Aegis is a DIY handheld that uses a 3D printed case with a Raspberry Pi CM4 and the official Raspberry Pi 7" screen. The official Raspberry Pi screen was chosen because it uses the DSI port on the Raspberry Pi and the CM4 could fit on either side of the display board. I opted to try a Waveshare 7in DSI LCD (C) that gives 1024X600 resolution. While a Raspberry Pi 4 might have fit inside the case, that was eventually designed, a custom carrier board was used to place the ports in the desired locations. To facilitate the controller portion of the device, the Wii U buttons and joysticks were used. This made it easy to use the button sub-assemblies so that the same tactile feel of the buttons could be maintained. The 3D printed case was based on the Wii U Gamepad but still designed from the ground up to fit the 7" screen and the custom circuit board. Finally, the whole thing was assembled with speakers and rumble motors to complete the handheld.
+The Aegis is a DIY handheld that uses a 3D printed case with a Raspberry Pi CM4 and the official Raspberry Pi 7" screen. The official Raspberry Pi screen was chosen because it uses the DSI port on the Raspberry Pi and the CM4 could fit on either side of the display board. 
+
+I opted to try a Waveshare 7in DSI LCD (C) that gives 1024X600 resolution.
+
+While a Raspberry Pi 4 might have fit inside the case, that was eventually designed, a custom carrier board was used to place the ports in the desired locations. To facilitate the controller portion of the device, the Wii U buttons and joysticks were used. This made it easy to use the button sub-assemblies so that the same tactile feel of the buttons could be maintained. The 3D printed case was based on the Wii U Gamepad but still designed from the ground up to fit the 7" screen and the custom circuit board. Finally, the whole thing was assembled with speakers and rumble motors to complete the handheld.
 
 ## Building the Handheld
 
@@ -42,15 +46,18 @@ Once the boards have been received you will need to assemble the circuitry on th
 ## Teensy LC Setup
 
 1. Download Teensyduino software add-on for the Arduino software
+
 https://www.pjrc.com/teensy/td_download.html
 
 2. Download ArduinoXInput library Zip
+
 https://github.com/dmadison/ArduinoXInput
 
 3. Add XInput library for the Teensyduino
   *Sketch > Include Library > Add .ZIP Library
 
 4. Add Teensy XInput USB Mode
+
 https://github.com/dmadison/ArduinoXInput_Teensy
 
 5. Open and Write Sketch locaated in the Teensy Folder
@@ -88,12 +95,14 @@ The carrier board was designed with the option of either using the CM4 lite or t
 
 Regardless of which CM4 you use and which method is used to load the OS, you will need to add the following lines to the /boot/config.txt file. These are also listed in the /Config/boot/config.txt file in this repository:
 
-dtoverlay=dwc2,dr_mode=host<br/>
-gpu_mem_256=128<br/>
-gpu_mem_512=256<br/>
-gpu_mem_1024=256<br/>
-force_turbo=1<br/>
+```html
+dtoverlay=dwc2,dr_mode=host
+gpu_mem_256=128
+gpu_mem_512=256
+gpu_mem_1024=256
+force_turbo=1
 h264_freq=333
+```
 
 The lines above will optimize the graphics for Moonlight (if you choose to use it to stream PC games) and will enable USB 2.0 on the device to get the Teensy and external USB ports working.
 
@@ -101,9 +110,18 @@ The lines above will optimize the graphics for Moonlight (if you choose to use i
 
 For the first boot you will need to plug in a HDMI cord into the HDMI mini port. This is required since the screen won't work yet. Once it boots you need to connect to Wifi or Ethernet through whatever OS you have installed and run the following commands (also listed in the Config folder):
 
-sudo apt install python3-gpiozero<br/>
-sudo apt install python3-smbus<br/>
+```html
+sudo apt install python3-gpiozero
+```
+```html
+sudo apt install python3-smbus
+```
+```html
 sudo wget https://datasheets.raspberrypi.com/cmio/dt-blob-disp1-only.bin -O /boot/dt-blob.bin
+```
+Waveshare 7inch DSI LCD (C) setup follow instructions
+
+https://github.com/Musicislife6984/Waveshare-DSI-LCD
 
 
 These will install required packages for a system monitor script and will also install the dt-blob.bin file to get the screen working. Once this is complete reboot the handheld and unplug the HDMI cord. The device will automatically switch to the screen on the reboot.
